@@ -54,7 +54,7 @@ def index():
     
     df2 = df.drop(['id','message','original','genre'],axis=1)
     msg_cats_sums = df2.sum()
-    msg_cats_names = list(df2.columns.values)
+    msg_cats_names = list(df2.columns)
     
     
     # create visuals
@@ -77,11 +77,15 @@ def index():
                     'title': "Genre"
                 }
             }
-            ,
+            
+            
+            },{
+            
+            
             'data2': [
                 Bar(
-                    x=msg_cats_names,
-                    y=msg_cats_sums
+                    x=genre_names,
+                    y=genre_counts
                 )
             ],
 
@@ -94,6 +98,7 @@ def index():
                     'title': "Categories"
                 }
             }        
+
 
         }
     ]
