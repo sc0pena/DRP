@@ -82,15 +82,15 @@ def index():
             },{
             
             
-            'data2': [
+            'data': [
                 Bar(
-                    x=genre_names,
-                    y=genre_counts
+                    x=msg_cats_names,
+                    y=msg_cats_sums
                 )
             ],
 
             'layout': {
-                'title': 'Sum of prelabeled msg categories',
+                'title': 'Sum of prelabeled message categories',
                 'yaxis': {
                     'title': "Sum"
                 },
